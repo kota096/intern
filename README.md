@@ -41,3 +41,4 @@ $ rails server
 を参考にしてください。# sample_sec
 # sample_sec
 # sample_sec
+# new_sample_app
