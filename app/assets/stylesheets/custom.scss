@@ -299,3 +299,29 @@ span.picture {
     border: 0;
   }
 }
+//勤怠表示画面の月変える
+.line{
+  color:black;
+  border: solid 1px gray;
+  &:hover{
+    border: solid 1px black;
+  }
+}
+/*
+.flex{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+*/
+
+/*勤怠表示画面*/
+.kintai_table1{
+  tr{
+    th{
+      padding:1%;
+    }
+  }
+}
