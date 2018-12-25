@@ -1,0 +1,2 @@
+class Whour < ApplicationRecord
+end

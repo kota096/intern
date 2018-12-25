@@ -13,7 +13,11 @@ User.create!(name:  "Example User",
              admin:     true,
              activated: true,
              activated_at: Time.zone.now)
-
+             
+Office.create!(
+    d_time:8.00,
+    n_time:7.5)
+    
 99.times do |n|
   name  = Faker::Name.name
   email = "example-#{n+1}@railstutorial.org"
@@ -40,3 +44,5 @@ following = users[2..50]
 followers = users[3..40]
 following.each { |followed| user.follow(followed) }
 followers.each { |follower| follower.follow(user) }
+
+#勤怠時定時間
