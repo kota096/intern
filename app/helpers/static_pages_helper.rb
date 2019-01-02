@@ -1,4 +1,5 @@
 module StaticPagesHelper
+    
     #番号を曜日に変換する
     def wdays(number)
         while number>6 do

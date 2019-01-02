@@ -1,11 +1,12 @@
 <% if logged_in? %>
+<% for mon in 1..12 do %>
   <div class="upper">
     <table class="kintai_table1" border="1" width="100%" cellspacing="0" cellpadding="5" bordercolor="silver">
       <!-- 表1-1行目 -->
       <tr>
         <th>
           <%= link_to "←" ,month_path,class: "btn line"%>
-          <%= Date.today.year.to_s+"年"+$i.today.month.to_s+"月"+" "+"時間管理表" %>
+          <%= Date.today.year.to_s+"年"+Date.today.month.to_s+"月"+" "+"時間管理表" %>
           <%= link_to "→" ,month_path,class: "btn line"%>
         </th>
         <th>
@@ -143,6 +144,8 @@
       <% end %>
     </table>
   </div>
+<% end %>
+
 <% else %>
   <div class="center jumbotron">
     <h1>勤怠システム</h1>

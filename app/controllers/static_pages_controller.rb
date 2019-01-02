@@ -4,8 +4,7 @@ class StaticPagesController < ApplicationController
     if logged_in?
       @feed_items = current_user.feed.paginate(page: params[:page])
       @user = current_user
-      $i = Date.today
-      
+      @page =　month.paginate(page: params[:page])
     end
   end
   def month
