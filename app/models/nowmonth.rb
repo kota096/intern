@@ -1,0 +1,2 @@
+class Nowmonth < ApplicationRecord
+end
