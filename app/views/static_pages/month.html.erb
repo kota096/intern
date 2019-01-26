@@ -1,10 +1,10 @@
-  <div class="upper">
+<div class="upper">
     <table class="kintai_table1" border="1" width="100%" cellspacing="0" cellpadding="5" bordercolor="silver">
       <!-- 表1-1行目 -->
       <tr>
         <th>
           <%= link_to "←" ,month_path,class: "btn line"%>
-          <%= Date.today.year.to_s+"年"+Date.today.month.to_s+"月"+" "+"時間管理表" %>
+          <%= Date.today.year.to_s+"年"+ @next_month.month.to_s+"月"+" "+"時間管理表" %>
           <%= link_to "→" ,month_path,class: "btn line"%>
         </th>
         <th>
@@ -41,12 +41,12 @@
         </th>
       </tr>
     </table>
-  </div>
+ </div>
   <!-- 編集ボタン-->
-  <div class="botton">
+ <div class="botton">
     <%= link_to "勤怠を編集", login_path, class: "btn btn-lg btn-primary" %>
-  </div>
-  <div class="center">
+ </div>
+ <div class="center">
     <!-- 勤怠カレンダー-->
     <table class="kintai_table1" border="1" width="100%" cellspacing="0" cellpadding="5" bordercolor="silver">
       <tr>
@@ -141,4 +141,4 @@
         </tr>
       <% end %>
     </table>
-  </div>
+ </div>

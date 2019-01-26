@@ -4,13 +4,19 @@ Rails.application.routes.draw do
   get 'password_resets/edit'
 
   get 'sessions/new'
-
-  root 'static_pages#home'
+  root 'month#to_month'
   #get  '/help',    to: 'static_pages#help'
   #get  '/contact', to: 'static_pages#contact'
   get  '/signup',   to: 'users#new'
   get  '/word',      to: 'users#word' 
-  #resources :users
+  get '/month', to: 'static_pages#month'
+  get  '/help',    to: 'static_pages#help'
+  get  '/contact', to: 'static_pages#contact'
+  get  '/signup',  to: 'users#new'
+  get '/next_month', to: 'month#next_month'
+  get '/previous_month', to: 'month#previous_month'
+  post '/next_month', to: 'month#plus'
+  get '/to_month', to: 'month#to_month'
   
   resources :users do
     member do

@@ -1,13 +1,14 @@
+<%= button_to "プラス", :action => "next_month" %>
+<%= $data %>
+<%= @month %>
 <% if logged_in? %>
-<% for mon in 1..12 do %>
   <div class="upper">
     <table class="kintai_table1" border="1" width="100%" cellspacing="0" cellpadding="5" bordercolor="silver">
       <!-- 表1-1行目 -->
-      <%= $a %>
       <tr>
         <th>
           <%= link_to "←" ,"/previous_month",class: "btn line"%>
-          <%= Date.today.year.to_s+"年"+Date.today.month.to_s+"月"+" "+"時間管理表" %>
+          <%= Date.today.year.to_s+"年"+@month.to_s+"月"+" "+"時間管理表" %>
           <%= link_to "→" ,"/next_month",class: "btn line"%>
         </th>
         <th>
@@ -144,17 +145,5 @@
         </tr>
       <% end %>
     </table>
-  </div>
-<% end %>
-
-<% else %>
-  <div class="center jumbotron">
-    <h1>勤怠システム</h1>
-    <%= link_to "ログイン", login_path, class: "btn btn-lg btn-primary" %>
-    <h2>
-      アカウント作成は
-      <%= link_to "こちら", signup_path %>
-      から
-    </h2>  
   </div>
 <% end %>
